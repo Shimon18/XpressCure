@@ -350,12 +350,25 @@ const Application6Month = React.lazy(()=>import('./views/ControlPanel/Analytics/
 const Registration6month = React.lazy(()=>import('./views/ControlPanel/Analytics/DoctorMitraReports/KeyInsights/AllCharts/Registration6month'))
 const Consultation6month = React.lazy(()=>import('./views/ControlPanel/Analytics/DoctorMitraReports/KeyInsights/AllCharts/Consultation6month'))
 const Speciality6month = React.lazy(()=>import('./views/ControlPanel/Analytics/DoctorMitraReports/KeyInsights/AllCharts/Speciality6month'))
-// const Application6Month = React.lazy(()=>import('./views/ControlPanel/Analytics/DoctorMitraReports/KeyInsights/AllCharts/Application6Month'))
+
+const DashboardAccounts = React.lazy(()=>import('./views/Accounts/DashboardAccounts'))
+const DashboardDoctor = React.lazy(()=>import('./views/Doctors/DashboardDoctor'))
+const DashboardDoctorMitra = React.lazy(()=>import('./views/DoctorMitra/DashboardDoctorMitra'))
+
+const Profile = React.lazy(()=>import('./views/Profile/Profile'))
+
 
 
 
 
 const routes = [
+
+
+  { path: '/DashboardAccounts', name: 'DashboardAccounts', component: DashboardAccounts },
+  { path: '/DashboardDoctor', name: 'DashboardDoctor', component: DashboardDoctor },
+  { path: '/DashboardDoctorMitra', name: 'DashboardDoctorMitra', component: DashboardDoctorMitra },
+  { path: '/Profile', name: 'Profile', component: Profile },
+
 
 
   { path: '/CreditPointsEarnedMitra', name: 'CreditPointsEarnedMitra', component: CreditPointsEarnedMitra },

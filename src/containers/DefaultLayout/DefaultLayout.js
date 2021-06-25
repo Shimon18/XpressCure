@@ -32,7 +32,7 @@ class DefaultLayout extends Component {
             <DefaultAside/>
           </div>
           <main className="main">
-            <Container fluid>
+            <Container fluid className="p-0 m-0">
               <Suspense fallback={this.loading()}>
                 <Switch>
                   {routes.map((route, idx) => {

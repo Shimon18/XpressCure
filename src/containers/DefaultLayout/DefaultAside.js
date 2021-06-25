@@ -63,6 +63,11 @@ class DefaultAside extends Component {
       isOpenHuman: !this.state.isOpenHuman,
     });
   };
+  onAccount = () => {
+    this.setState({
+      isOpenAccount: !this.state.isOpenAccount,
+    });
+  };
   render() {
     // eslint-disable-next-line
     const { children, ...attributes } = this.props;
@@ -87,9 +92,15 @@ class DefaultAside extends Component {
                   </Link>
 
                   <Collapse isOpen={this.state.isOpen}>
+                  <Link
+                      to={"/DashboardDoctor"}
+                      className="sidebarLink sidebar_dropdown_link custom_sidelink mt-2"
+                    >
+                      Dashboard
+                    </Link>
                     <Link
                       to={"/AllDoctors"}
-                      className="sidebarLink sidebar_dropdown_link custom_sidelink mt-2"
+                      className="sidebarLink sidebar_dropdown_link custom_sidelink"
                     >
                       All Doctors
                     </Link>
@@ -108,10 +119,11 @@ class DefaultAside extends Component {
                   </Collapse>
                 </li>
                 <li class="submenu" onClick={this.onDoctorMitra}>
-                  <a>
+                 
+                  <Link to={"/DashboardDoctorMitra"} onClick={this.onDoctorMitra}>
                     <i class="fa fa-user-md"></i> <span> Doctor Mitra </span>{" "}
                     <span class="menu-arrow"></span>
-                  </a>
+                  </Link>
 
                   <Collapse isOpen={this.state.isOpenMitra}>
                     <Link
@@ -176,11 +188,27 @@ class DefaultAside extends Component {
                   </Link>
                 </li>
 
-                <li>
+
+                <li class="submenu">
+                  <Link to={"/Accounts"} onClick={this.onAccount}>
+                    <i class="fa fa-hospital-o"></i>
+                    <span> Accounts </span>
+                    <span class="menu-arrow"></span>
+                  </Link>
+
+                  <Collapse isOpen={this.state.isOpenAccount}>
+                    <Link
+                      to={"/DashboardAccounts"}
+                      className="sidebarLink sidebar_dropdown_link custom_sidelink" >
+                      Dashboard
+                    </Link>
+                  </Collapse>
+                </li>
+                {/* <li>
                   <Link to={"/Accounts"}>
                     <i class="fa fa-hospital-o"></i> <span>Accounts</span>
                   </Link>
-                </li>
+                </li> */}
                
 
                 <li>

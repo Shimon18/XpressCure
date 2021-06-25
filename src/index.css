@@ -4,19 +4,20 @@
     font-family: 'Poppins', sans-serif ;
 }
 .sidebar_dropdown_link{
-	margin-left: 40px !important;
-	padding-top: 0px !important;
+    margin-left: 40px !important;
+    padding-top: 0px !important;
     padding-left: 20px !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
 }
 .sidebar_dropdown_link::before {
     content: '.';
-    width: 7px;
-    height: 7px;
-    background-color: white ;
+    width: 11px;
+    height: 2px;
+    background-color: white;
     position: absolute;
-    border-radius: 50%;
     margin-top: 10px;
-    margin-left: -20px;
+    margin-left: -25px;
     color: transparent;
 }
 .sidebar-menu li a:hover {
@@ -35,16 +36,18 @@
   .page-title {
     color: black !important;
     font-size: 21px;
-    font-weight: 600 !important;
+    font-family: 'Poppins';
+    font-weight: 500 !important;
     margin-bottom: 20px;
 }
 .sidebar {
-    box-shadow: 0px 0px 10px lightgrey !important;
     top: 50px;
     width: 230px;
     z-index: 1039;
-    background-color: #2a2a72;
-    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    background-color: #166d3b;
+    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+    
+
 
     bottom: 0;
     margin-top: 0px;
@@ -63,22 +66,22 @@
     -webkit-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
     color: white !important;
+    font-weight: 300 !important;
 }
 .sidebar-menu li.active a {
-    color: #009efb !important;
-    background-color: #f3f3f3;
+    color: antiquewhite !important;
+    background-color: forestgreen !important;
 }
 
 .header {
-    background-color: #2a2a72;
-    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    background-color: #166d3b;
+    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);  
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
     z-index: 1041;
     height: 50px;
-    box-shadow: 0px 0px 10px grey !important;
 }
 .sidebar-menu li a {
     color: white !important;
@@ -114,8 +117,8 @@
 }
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6;
-    background: lightblue;
+    border-bottom: 0px solid #dee2e6 !important;
+    background: rgb(205, 234, 243);
 }
 .text-danger {
     color: #dc3545!important;
@@ -196,26 +199,26 @@
     min-height: 69vh;
 }
 .form-control{
-    border: 1px solid #ced4da !important;
+    border: none !important;
+    background-color: ghostwhite !important;
 }
 
 .form-group label{
     text-transform: capitalize;
 }
 #date{
-    border: 1px solid grey;
-    background: none;
+    border: none;
+    background: #f7f7f7;
     display: block;
     padding: 10px 10px;
-    width: 158px;
+    width: 157px;
     outline: none;
     color: black;
     border-radius: 25px;
     text-align: center;
-    -webkit-transition: 250ms width ease, 250ms border-color ease;
     transition: 250ms width ease, 250ms border-color ease;
-    height: 50px;
-    margin-left: 10px;
+    height: 35px;
+    margin-left: 3px;
     font-size: 13px;
   }
   .modal_textarea{
@@ -232,7 +235,7 @@
       color: black;
   }
   .table {
-    box-shadow: 0px 5px 10px lightgrey;
+    box-shadow: none;
 }
 
 .First_col{
@@ -330,21 +333,21 @@ textarea:focus{
 
 .control_menu_div{
     text-align: left;
-    background: aliceblue;
-    box-shadow: 0px 0px 10px lightgrey;
+    background: lavender;
+    box-shadow: 0px 0px 0px lightgrey;
     cursor: pointer;
     display: flex;
     align-items: center;
     padding: 25px;
-    height: 100px;
+    height: 70px;
     border-radius: 5px;
     margin-bottom: 15px;
     font-size: 18px;
 }
 .back_btn{
     position: absolute;
-    left: -25px;
-    font-size: 25px;
+    left: -11px;
+    font-size: 24px;
     color: black;
 }
 .c-btn{
@@ -355,4 +358,17 @@ textarea:focus{
 }
 .onboard_width{
     width: 90%;
+}
+.btn-primary {
+    color: #fff;
+    background-color: darkcyan !important;
+    border-color: currentColor !important;
+}
+.form-control:focus {
+ 
+    box-shadow: 0px 0px 2px olive !important;
+}
+
+.bg_lav{
+    background-color: #f7f7f7 !important;
 }

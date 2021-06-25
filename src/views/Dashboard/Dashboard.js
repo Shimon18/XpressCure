@@ -1,4 +1,6 @@
 import React, { Component, lazy, Suspense } from "react";
+import Chart from 'react-apexcharts';
+
 
 
 class Dashboard extends Component {
@@ -11,6 +13,19 @@ class Dashboard extends Component {
     this.state = {
       dropdownOpen: false,
       radioSelected: 2,
+      options: {
+        chart: {
+          id: 'apexchart-example'
+        },
+        xaxis: {
+          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+        }
+      },
+      series: [{
+        name: 'series-1',
+        data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+      }]
+
     };
   }
 
@@ -34,7 +49,7 @@ class Dashboard extends Component {
     return (
       <div className="animated fadeIn">
 
-     <div class="page-wrapper">
+     <div class="page-wrapper bg_lav">
             <div class="content">
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
@@ -83,7 +98,7 @@ class Dashboard extends Component {
 									<h4>Patient Total</h4>
 									<span class="float-right"><i class="fa fa-caret-up" aria-hidden="true"></i> 15% Higher than Last Month</span>
 								</div>
-								<canvas id="linegraph"></canvas>
+              <Chart options={this.state.options} series={this.state.series} type="bar" width={"100%"} height={320} />
 							</div>
 						</div>
 					</div>
@@ -99,7 +114,7 @@ class Dashboard extends Component {
 										</ul>
 									</div>
 								</div>
-								<canvas id="bargraph"></canvas>
+                                <Chart options={this.state.options} series={this.state.series} type="bar" width={"100%"} height={320} />
 							</div>
 						</div>
 					</div>
@@ -109,7 +124,7 @@ class Dashboard extends Component {
 								<div class="chart-title">
 									<h4>Daily Recharges</h4>
 								</div>
-								<canvas id="bargraph"></canvas>
+                                <Chart options={this.state.options} series={this.state.series} type="line" width={"100%"} height={320} />
 							</div>
 						</div>
 					</div>
@@ -125,7 +140,7 @@ class Dashboard extends Component {
 										</ul>
 									</div>
 								</div>
-								<canvas id="bargraph"></canvas>
+                                <Chart options={this.state.options} series={this.state.series} type="line" width={"100%"} height={320} />
 							</div>
 						</div>
 					</div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
+
 import {
   Badge,
   UncontrolledDropdown,
@@ -10,10 +11,8 @@ import {
   NavItem,
 } from "reactstrap";
 import PropTypes from "prop-types";
-import image from '../../assets/img/index'
-import logo from "../../assets/img/brand/logo.svg";
-import sygnet from "../../assets/img/brand/sygnet.svg";
 
+import FinalLogo from '../../assets/img/brand/logo.png'
 const propTypes = {
   children: PropTypes.node,
 };
@@ -30,8 +29,7 @@ class DefaultHeader extends Component {
         <div class="header">
           <div class="header-left">
             <a href="#" class="logo">
-          <img src={image.logo_main} width="35" height="35" alt="" />{" "}
-              <span>XpressCure</span>
+          <img src={FinalLogo} className="w-100" alt="" />
             </a>
           </div>
           <a id="toggle_btn" href="javascript:void(0);">
@@ -194,12 +192,11 @@ class DefaultHeader extends Component {
                 <span>Admin</span>
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="profile.html">
-                  My Profile
-                </a>
-                <a class="dropdown-item" href="edit-profile.html">
-                  Edit Profile
-                </a>
+              <Link to={"./Profile"}>
+              <a class="dropdown-item" href="#">
+                My Profile
+              </a>
+              </Link>
                 <a class="dropdown-item" href="settings.html">
                   Settings
                 </a>
@@ -209,30 +206,8 @@ class DefaultHeader extends Component {
               </div>
             </li>
           </ul>
-          <div class="dropdown mobile-user-menu float-right">
-            <a
-              href="#"
-              class="dropdown-toggle"
-              data-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="fa fa-ellipsis-v"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">
-                My Profile
-              </a>
-              <a class="dropdown-item" href="#">
-                Edit Profile
-              </a>
-              <a class="dropdown-item" href="#">
-                Settings
-              </a>
-              <a class="dropdown-item" href="#">
-                Logout
-              </a>
-            </div>
-          </div>
+         
+          
         </div>
       </React.Fragment>
     );
